@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TaskbarSystemMonitor">
+</Property><Property Name="Solution File" Value="C:\Dropbox\Projects\ARCHIVE\C#\TaskbarSystemMonitor\TaskbarSystemMonitor.sln">
+</Property><Property Name="Date" Value="14 February 2011">
+</Property><Property Name="Time" Value="21:04">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="TaskbarSystemMonitor" Source="TaskbarSystemMonitor\TaskbarSystemMonitor.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TaskbarSystemMonitor" Source="TaskbarSystemMonitor\TaskbarSystemMonitor.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Windows7.DesktopIntegration" Source="Windows7.DesktopIntegration\Windows7.DesktopIntegration.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Windows7.DesktopIntegration" Source="Windows7.DesktopIntegration\Windows7.DesktopIntegration.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="TaskbarSystemMonitor.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="TaskbarSystemMonitor.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TaskbarSystemMonitor" Source="TaskbarSystemMonitor\TaskbarSystemMonitor.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Windows7.DesktopIntegration" Source="Windows7.DesktopIntegration\Windows7.DesktopIntegration.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
