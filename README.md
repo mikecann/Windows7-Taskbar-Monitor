@@ -6,6 +6,9 @@ At-a-glance monitoring of essential system performance.
 
 The idea is very simple. I like iStat Pro for the mac OS (<http://www.islayer.com/apps/istatpro/>) and I wanted similar system performance at-a-glance on windows too.
 
+![the app](http://www.mikecann.co.uk/projects/TaskbarSystemMonitor/Shot_01.png)
+![taskbar](http://www.mikecann.co.uk/wp-content/uploads/2010/03/ScreenHunter_03-Mar.-14-21.46.gif)
+
 Seeing the new features in the Windows 7 taskbar I considered it would now be possible to present some very basic visual information in the taskbar.
 
 ## New In v0.3
