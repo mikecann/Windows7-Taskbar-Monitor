@@ -35,14 +35,13 @@
             this._netBut = new System.Windows.Forms.Button();
             this._memBut = new System.Windows.Forms.Button();
             this._cpuBut = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(114, 356);
+            this.linkLabel1.Location = new System.Drawing.Point(115, 328);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(86, 13);
             this.linkLabel1.TabIndex = 6;
@@ -54,11 +53,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 356);
+            this.label1.Location = new System.Drawing.Point(5, 328);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "v0.3";
+            this.label1.Text = "v0.1";
             // 
             // pictureBox1
             // 
@@ -111,23 +110,11 @@
             this._cpuBut.UseVisualStyleBackColor = true;
             this._cpuBut.Click += new System.EventHandler(this._cpuBut_Click);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(63, 319);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Disable Bars";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(203, 378);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(203, 349);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
@@ -153,7 +140,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
 
 
 

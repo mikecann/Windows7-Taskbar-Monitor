@@ -5,18 +5,15 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C8B68B71-C8BC-4F9C-806D-31D5778554C5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{E3F064A7-ECEF-46B8-83BD-299E4E8BDF82}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaskbarSystemMonitor</RootNamespace>
-    <AssemblyName>TaskbarSystemMonitor</AssemblyName>
+    <RootNamespace>Windows7.DesktopIntegration</RootNamespace>
+    <AssemblyName>Windows7.DesktopIntegration</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <ManifestCertificateThumbprint>9901B31060FE4CCB1C36C22A2522F51EB1F48C2F</ManifestCertificateThumbprint>
-    <ManifestKeyFile>TaskbarSystemMonitor_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>
+    </StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -33,8 +30,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
-    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -45,7 +42,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Windows7.DesktopIntegration.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -55,7 +52,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\Windows7.DesktopIntegration.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
@@ -76,24 +73,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IconHelper.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="DWM\CustomWindowsManager.cs">
+    </Compile>
+    <Compile Include="Interop\IIDGuid.cs" />
+    <Compile Include="Interop\Interop.cs" />
+    <Compile Include="DWM\ProxyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Monitors\CPUMonitor.cs" />
-    <Compile Include="Monitors\MemoryMonitor.cs" />
-    <Compile Include="Monitors\NetworkMonitor.cs" />
-    <Compile Include="Monitors\PerformanceMonitorBase.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Libraries\ShellLibrary.cs" />
+    <Compile Include="RegistrationHelper.cs" />
+    <Compile Include="JumpLists\JumpListImpl.cs" />
+    <Compile Include="JumpLists\JumpListManager.cs" />
+    <Compile Include="ThumbnailButtons\ThumbButton.cs" />
+    <Compile Include="ThumbnailButtons\ThumbButtonManager.cs" />
+    <Compile Include="Interop\COMTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -106,39 +102,28 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="TaskbarSystemMonitor_TemporaryKey.pfx" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Tweener.cs" />
+    <Compile Include="Windows7Taskbar.cs" />
+    <Compile Include="UI\WindowsFormsExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Windows7.DesktopIntegration\Windows7.DesktopIntegration.csproj">
-      <Project>{E3F064A7-ECEF-46B8-83BD-299E4E8BDF82}</Project>
-      <Name>Windows7.DesktopIntegration</Name>
+    <ProjectReference Include="..\..\VistaBridge1.4_Modifies\vistabridgelibrary\vistabridgelibrary.csproj">
+      <Project>{CE304F35-FABF-4A24-AC48-5710670A82BE}</Project>
+      <Name>vistabridgelibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows7.DesktopIntegration.Registration\Windows7.DesktopIntegration.Registration.csproj">
+      <Project>{03F9F5A8-F3F4-499A-8B15-57ADBA5148CC}</Project>
+      <Name>Windows7.DesktopIntegration.Registration</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -151,18 +136,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\cpu.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\mem.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\Network-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

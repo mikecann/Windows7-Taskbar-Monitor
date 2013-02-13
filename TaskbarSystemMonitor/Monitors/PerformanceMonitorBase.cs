@@ -23,7 +23,6 @@ namespace TaskbarSystemMonitor.Monitors
         protected float _endVal;
         protected float _age;
         protected float _animTimerUpdateInterval = 100;
-        protected bool _barsEnabled = true;
 
         virtual public void Init()
         {
@@ -52,7 +51,7 @@ namespace TaskbarSystemMonitor.Monitors
             _age = 0;
         }
 
-        virtual public void onAnimTimerTick(object sender, EventArgs eArgs)
+        public void onAnimTimerTick(object sender, EventArgs eArgs)
         {
             _age += _animTimerUpdateInterval;
             progressVal = (int)(_startVal+((_endVal - _startVal) / timerInterval) * _age);
@@ -77,6 +76,5 @@ namespace TaskbarSystemMonitor.Monitors
         virtual protected int timerInterval { get { return 500; } }
         virtual protected string name { get { return ""; } }
         virtual protected Icon monitorIcon { get { return null; } }
-        public bool barsEnabled { get { return _barsEnabled; } set { _barsEnabled = value; _progressVal = -1; } }
     }
 }
