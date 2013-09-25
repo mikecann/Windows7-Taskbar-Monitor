@@ -11,6 +11,13 @@ The idea is very simple. I like iStat Pro for the mac OS (<http://www.islayer.co
 
 Seeing the new features in the Windows 7 taskbar I considered it would now be possible to present some very basic visual information in the taskbar.
 
+## New In v0.4
+
+Blog post: <http://mikecann.co.uk/personal-project/windows-taskbar-monitor-v0-4/>
+
++ Fixed an issue with windows 8
++ Removed the "MEM" and "NET" and "CPU" prefix from the titlebar (it wasnt needed)
+
 ## New In v0.3
 
 Blog post: <http://mikecann.co.uk/personal-project/windows-taskbar-monitor-v0-3/>
