@@ -11,6 +11,20 @@ The idea is very simple. I like iStat Pro for the mac OS (<http://www.islayer.co
 
 Seeing the new features in the Windows 7 taskbar I considered it would now be possible to present some very basic visual information in the taskbar.
 
+## Commandline Args
+
+If you want to configure the app to start with a specific monitor open you can do it with the "-type" flag. 
+
+So for example:
+
+```
+TaskbarSystemMonitor.exe -type cpu
+```
+
+Will open the monitor with CPU selected. The other options are "mem" and "net" for Memory and Network.
+
+I like to make three shortcuts with the three different types and put them in the windows startup directory so they start when Windows starts.
+
 ## New In v0.4
 
 Blog post: <http://mikecann.co.uk/personal-project/windows-taskbar-monitor-v0-4/>
